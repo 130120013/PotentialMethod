@@ -103,11 +103,15 @@ int main()
 {
 	vector<double> X; //входы
 	vector<params> param; //важность
-	vector<double> Y; //выходы
+	vector<double> W; //выходы
 
 	param = learnParams();
 
-	double w = K(p(X[0], X).second)*findPotential(p(X[0], X).second, param);
+	for (auto i = 0; i < X.size(); i++)
+	{
+		W.emplace_back(K(p(X[i], X).second/h)*findPotential(p(X[i], X).second, param));
+	}
+
 
 
 	//erf - 2/sqrt(PI)*integral(0 - x) (e^(-t^2) dt)
