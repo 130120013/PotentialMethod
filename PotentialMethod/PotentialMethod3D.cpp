@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <fstream>
 #include <string>
+
 using namespace std;
 
 double a(double, double);
@@ -12,44 +13,16 @@ double K(double);
 const int h = 5;
 int epsilon;
 
-struct soybean
+struct subject
 {
-	int month;
-	int hail;
-	int severity;
-	int leaves;
-	int leafspots_halo;
-	int lodfing;
-	int canker_lesion;
-	int fruiting_bodies;
-	int mycelium;
-	int int_discolor;
-	int sclerotia;
-	int fruit_pods;
+	double x;
+	double y;
+	double z;
 };
 
-/*
-classes
-
-1. diaporthe-stem-canker: 10
-2. charcoal-rot: 10
-3. rhizoctonia-root-rot: 10
-5. brown-stem-rot: 20
-6. powdery-mildew: 10
-7. downy-mildew: 10
-9. bacterial-blight: 10
-10. bacterial-pustule: 10
-11. purple-seed-stain: 10
-12. anthracnose: 20
-13. phyllosticta-leaf-spot: 10
-16. diaporthe-pod-&-stem-blight: 6
-17. cyst-nematode: 6
-18. 2-4-d-injury: 1
-19. herbicide-injury: 4
-*/
 struct params
 {
-	soybean x;
+	double x;
 	double p;
 };
 
@@ -59,32 +32,21 @@ double a(double u, double w)
 	return res;
 }
 
-double evcl(soybean a, soybean b) //или сделать x, y, z
+double evcl(subject a, subject b) //или сделать x, y, z
 {
-	int month;
-	int hail;
-	int severity;
-	int leaves;
-	int leafspots_halo;
-	int lodfing;
-	int canker_lesion;
-	int fruiting_bodies;
-	int mycelium;
-	int int_discolor;
-	int sclerotia;
-	int fruit_pods;
+	return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2) + pow(a.z - b.z, 2));
 }
 
-pair<double, double> p(soybean u, const vector<pair<soybean, double>> X) //берем sqrt((xi - xj)^2 + (yi - yj)^2 + ...)
+pair<subject, double> p(subject u, const vector<pair<subject, double>> X) //берем sqrt((xi - xj)^2 + (yi - yj)^2 + ...)
 {
-	pair<soybean, double> res;
+	pair<subject, double> res;
 	res.second = X.front().second;
 	for (auto it = X.begin(); it != X.end(); it++)
 	{
-		if (res.second > evcl())
+		if (res.second > evcl(u, (*it).first))
 		{
-			res.second = *it - u;
-			res.first = *it;
+			res.second = evcl(u, (*it).first);
+			res.first = (*it).first;
 		}
 	}
 	return res;
@@ -101,7 +63,7 @@ double K(double r)
 }
 
 
-vector<params> learnParams(const vector<soybean> X, const vector<soybean> Y)
+vector<params> learnParams(const vector<double> X, const vector<double> Y)
 {
 	int errorCount = 0;
 	vector<params> par;
@@ -150,16 +112,20 @@ const double findPotential(double val, const vector<params>& param)
 
 int main()
 {
-	ifstream istrX("123.txt");
+	ifstream istrX;
 	ifstream istrY("1234.txt");
 	ifstream inX("12.txt");
-	vector<double> XLearn; //(read from file input)
-	vector<double> YLearn; //(read from file output)
-	vector<double> X; //âõîäû
+	istrX.open("123.txt");
+	string str;
+	vector<subject> XLearn; //(read from file input)
+	vector<subject> YLearn; //(read from file output)
+	vector<subject> X; //âõîäû
 	vector<params> param; //âàæíîñòü
 	vector<double> W; //âûõîäû
-	vector<pair<soybean, double>> w;//использовать этот
+	vector<pair<subject, double>> w;//использовать этот
 	double n;
+
+	getline(istrX, str);
 
 	while (istrX >> n)
 	{
