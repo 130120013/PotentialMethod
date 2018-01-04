@@ -12,7 +12,11 @@ double a(double, double);
 double w(double, double, double);
 double K(double);
 const int h = 5;
-int epsilon;
+int epsilon = 6;
+enum soybeanClass { diaporthe_stem_canker, charcoal_rot, rhizoctonia_root_rot,
+	brown_stem_rot, powdery_mildew, downy_mildew, bacterial_blight,
+	bacterial_pustule, purple_seed_stain, anthracnose, phyllosticta_leaf_spot,
+	diaporthe_pod_stem_blight, cyst_nematode, type_2_4_d_injury, herbicide_injury };
 
 vector<string> split(const string &s, char delim) {
     stringstream ss(s);
@@ -29,7 +33,7 @@ struct subject
 	double x;
 	double y;
 	double z;
-	
+	subject() = default;
 	subject(double X, double Y, double Z)
 	{
 		x = X; y = Y; z = Z;
@@ -40,9 +44,11 @@ struct params
 {
 	subject x;
 	double p;
-	params(subject X, double P)
+	soybeanClass classVal;
+	params() = default;
+	params(subject X, double P, soybeanClass cV)
 	{
-		x = X; p = P;
+		x = X; p = P; classVal = cV;
 	}
 };
 
@@ -76,13 +82,13 @@ double evcl(subject a, subject b) //или сделать x, y, z
 pair<subject, double> p(subject u, const vector<subject> X) //берем sqrt((xi - xj)^2 + (yi - yj)^2 + ...)
 {
 	pair<subject, double> res;
-	res.second = X.front().second;
+	res.second = 0;
 	for (auto it = X.begin(); it != X.end(); it++)
 	{
-		if (res.second > evcl(u, (*it).first))
+		if (res.second > evcl(u, (*it)))
 		{
-			res.second = evcl(u, (*it).first);
-			res.first = (*it).first;
+			res.second = evcl(u, (*it));
+			res.first = (*it);
 		}
 	}
 	return res;
@@ -99,30 +105,40 @@ double K(double r)
 }
 
 
-vector<params> learnParams(const vector<subject> X, const vector<double> Y)
+vector<params> learnParams(vector<subject> X, const vector<soybeanClass> Y)
 {
 	int errorCount = 0;
 	vector<params> par;
 
 	for (int j = 0; j < X.size(); j++)
 	{
-		params v(X[j], 0);
+		params v;
+		v.classVal = Y[j];
+		v.p = 0;
+		v.x = X[j];
 		//v.x = ;
 		//v.p = 0;
 		par.emplace_back(v);
 	}
+	double maxW = 0;
+	int maxPotIndex = 0;
 	do
 	{
 		errorCount = 0;
-
-		for (int i = 0; i < X.size(); i++)
+		for (int k = 0; k < X.size(); k++)
 		{
-			if (a(X[i], 1) != Y[i])
+
+			for (int i = 0; i < X.size(); i++)
 			{
-				errorCount += 1;
-				par[i].p += 1;
+				if (X[k]* != Y[i])
+				{
+					maxPotIndex = i;
+					errorCount += 1;
+					par[i].p += 1;
+				}
 			}
 		}
+	}
 
 	} while (errorCount > epsilon); //ïîêà êîëè÷åñòâî îøèáîê áîëüøå äîïóñòèìîãî
 
@@ -154,7 +170,7 @@ int main()
 	istrX.open("123.txt");
 	string str;
 	vector<subject> XLearn; //(read from file input)
-	vector<double> YLearn; //(read from file output)
+	vector<int> YLearn; //(read from file output)
 	vector<subject> X; //âõîäû
 	vector<params> param; //âàæíîñòü
 	vector<double> W; //âûõîäû
@@ -180,7 +196,7 @@ int main()
 
 	while (getline(istrY, n))
 	{
-		YLearn.push_back(stod(n));
+		YLearn.push_back(stoi(n));
 	}
 
 	while (getline(inX, n))
