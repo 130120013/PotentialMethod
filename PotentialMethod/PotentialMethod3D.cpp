@@ -11,7 +11,6 @@ using namespace std;
 struct subject;
 
 int a(vector<double>);
-double w(double, double, double);
 double K(double);
 double evcl(subject, subject);
 double H(vector<subject>, subject);
@@ -135,6 +134,15 @@ vector<int> learnParams(vector<subject> X, const vector<soybeanClass> Y)
 		}
 	} while (errorCount > epsilon); //while errors more than limit (epsilon)
 
+	ofstream outQ("124234.txt");
+	if (!outQ.good())
+	{
+		outQ.open("124234.txt", ios::app);
+		for (auto item : q)
+		{
+			outQ << item << "\n";
+		}
+	}
 	return q;
 }
 
@@ -149,6 +157,7 @@ void makeReportResult()
 int main()
 {
 	ifstream istrX;
+	ifstream istrParam; //for reading params
 	ifstream istrY("1234.txt");
 	ifstream inX("12.txt");
 	istrX.open("123.txt", ios::in);
