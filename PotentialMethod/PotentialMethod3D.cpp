@@ -8,16 +8,24 @@
 
 using namespace std;
 
-double a(double, double);
+struct subject;
+
+int a(vector<double>);
 double w(double, double, double);
 double K(double);
-const int h = 5;
-int epsilon = 6;
+double evcl(subject, subject);
+double H(vector<subject>, subject);
+
+int h;
+const int epsilon = 6;
+
+//classes
 enum soybeanClass { diaporthe_stem_canker, charcoal_rot, rhizoctonia_root_rot,
 	brown_stem_rot, powdery_mildew, downy_mildew, bacterial_blight,
 	bacterial_pustule, purple_seed_stain, anthracnose, phyllosticta_leaf_spot,
 	diaporthe_pod_stem_blight, cyst_nematode, type_2_4_d_injury, herbicide_injury };
 
+//for dividing to strings
 vector<string> split(const string &s, char delim) {
     stringstream ss(s);
     string item;
@@ -40,63 +48,48 @@ struct subject
 	}
 };
 
-struct params
-{
-	subject x;
-	double p;
-	soybeanClass classVal;
-	params() = default;
-	params(subject X, double P, soybeanClass cV)
-	{
-		x = X; p = P; classVal = cV;
-	}
-};
 
-double a(double u, double w)
+int a(vector<double> W) //find maximum W
 {
-	double res;
+	int res = 0;
+	double start = W.front();
+
+	for (int i = 1; i < W.size(); i++)
+	{
+		if (W[i] > start)
+		{
+			start = W[i];
+			res = i;
+		}
+	}
 	return res;
 }
 
-double evcl(subject a, subject b) //или сделать x, y, z
+double evcl(subject a, subject b) //distance
 {
 	return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2) + pow(a.z - b.z, 2));
 }
 
-/*pair<subject, double> p(subject u, const vector<pair<subject, double>> X) //берем sqrt((xi - xj)^2 + (yi - yj)^2 + ...)
+double H(vector<subject> X, int ex) //Parsen's window with variable width
 {
-	pair<subject, double> res;
-	res.second = X.front().second;
-	for (auto it = X.begin(); it != X.end(); it++)
+	vector<pair<double, int>> distances;
+
+	for (int i = 0; i < X.size(); i++)
 	{
-		if (res.second > evcl(u, (*it).first))
+		if (i != ex) //no repeats like evcl(X[2], X[2])
 		{
-			res.second = evcl(u, (*it).first);
-			res.first = (*it).first;
+			double dist = evcl(X[ex], X[i]);
+			distances.push_back({ dist, i });
 		}
 	}
-	return res;
-}
-*/
 
-pair<subject, double> p(subject u, const vector<subject> X) //берем sqrt((xi - xj)^2 + (yi - yj)^2 + ...)
-{
-	pair<subject, double> res;
-	res.second = 0;
-	for (auto it = X.begin(); it != X.end(); it++)
+	for (auto it : distances)
 	{
-		if (res.second > evcl(u, (*it)))
-		{
-			res.second = evcl(u, (*it));
-			res.first = (*it);
-		}
+		std::sort(distances.begin(), distances.end());
 	}
-	return res;
-}
 
-double w(double x, double p, double param)
-{
-	return param * K(p / h);
+	double result = distances.front().first / distances[1].first;
+	return result;
 }
 
 double K(double r)
@@ -104,75 +97,66 @@ double K(double r)
 	return 1 / (r + 1);
 }
 
+/////////////////////////////////////////////////////////////////////////////
 
-vector<params> learnParams(vector<subject> X, const vector<soybeanClass> Y)
+vector<int> learnParams(vector<subject> X, const vector<soybeanClass> Y)
 {
 	int errorCount = 0;
-	vector<params> par;
+	vector<int> q; //gamma
 
-	for (int j = 0; j < X.size(); j++)
+	for (int n = 0; n < X.size(); n++)
 	{
-		params v;
-		v.classVal = Y[j];
-		v.p = 0;
-		v.x = X[j];
-		//v.x = ;
-		//v.p = 0;
-		par.emplace_back(v);
+		q.push_back(0);
 	}
-	double maxW = 0;
+
+	vector<double> weights;
+
 	int maxPotIndex = 0;
 	do
 	{
 		errorCount = 0;
 		for (int k = 0; k < X.size(); k++)
 		{
-
 			for (int i = 0; i < X.size(); i++)
 			{
-				if (X[k]* != Y[i])
-				{
-					maxPotIndex = i;
-					errorCount += 1;
-					par[i].p += 1;
-				}
+				double w = K(H(X, k))* q[i];
+				weights.push_back(w); //find all W
 			}
+
+			maxPotIndex = a(weights); //find max W (its index)
+
+			if (Y[maxPotIndex] != Y[k]) //different classes? +1 error, +1 for q
+			{
+				errorCount += 1;
+				q[k] += 1;
+			}
+
+			weights.clear();
 		}
-	}
+	} while (errorCount > epsilon); //while errors more than limit (epsilon)
 
-	} while (errorCount > epsilon); //ïîêà êîëè÷åñòâî îøèáîê áîëüøå äîïóñòèìîãî
-
-	return par;
+	return q;
 }
 
-void makeReport()
+void makeReportEducation()
 {
-	//âûãðóçêà äàííûõ â áëîêíîò
 }
 
-const double findPotential(subject val, const vector<params>& param)
+void makeReportResult()
 {
-	for (auto it = param.begin(); it != param.end(); it++)
-	{
-		if (it->x.x == val.x && it->x.y == val.y && it->x.z == val.z)
-		{
-			return it->p;
-		}
-	}
 }
-//double h(double)
 
 int main()
 {
 	ifstream istrX;
 	ifstream istrY("1234.txt");
 	ifstream inX("12.txt");
-	istrX.open("123.txt");
+	istrX.open("123.txt", ios::in);
 	string str;
 	vector<subject> XLearn; //(read from file input)
-	vector<int> YLearn; //(read from file output)
+	vector<soybeanClass> YLearn; //(read from file output)
 	vector<subject> X; //âõîäû
-	vector<params> param; //âàæíîñòü
+	vector<int> param; //âàæíîñòü
 	vector<double> W; //âûõîäû
 	vector<pair<subject, double>> w;//использовать этот
 	string n;
@@ -196,7 +180,7 @@ int main()
 
 	while (getline(istrY, n))
 	{
-		YLearn.push_back(stoi(n));
+		YLearn.push_back(soybeanClass(stoi(n)));
 	}
 
 	while (getline(inX, n))
@@ -207,15 +191,6 @@ int main()
 	}
 
 	param = learnParams(XLearn, YLearn);
-
-	for (auto i = 0; i < X.size(); i++)
-	{
-		W.emplace_back(K(p(X[i], XLearn).second / h)*findPotential(p(X[i], XLearn).first, param));
-	}
-
-
-
-	//erf - 2/sqrt(PI)*integral(0 - x) (e^(-t^2) dt)
 
 	return 0;
 }
