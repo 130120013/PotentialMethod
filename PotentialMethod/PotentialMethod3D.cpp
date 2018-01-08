@@ -48,7 +48,7 @@ struct subject
 };
 
 
-int a(vector<double> W) //find maximum W
+int a(vector<int> W) //find maximum W
 {
 	int res = 0;
 	double start = W.front();
@@ -150,8 +150,28 @@ void makeReportEducation()
 {
 }
 
-void makeReportResult()
+void makeReportResult(const vector<subject> X, const vector<int> q, const vector<soybeanClass> Y)
 {
+	ofstream outQ("ReportResult.txt");
+	outQ.open("ReportResult.txt", ios::app);
+	
+	outQ << "_____RESULTS_____\n";
+	int errorCount, maxPotIndex = 0;
+		errorCount = 0;
+		for (int k = 0; k < X.size(); k++)
+		{
+			maxPotIndex = a(q); //find max W (its index)
+
+			outQ << "Subject: x - " << X[k].x << ", y - " << X[k].y << ", z - " << X[k].z <<";";
+			outQ << " Result: class " << Y[maxPotIndex] << " - ";
+			if (Y[maxPotIndex] != Y[k]) //different classes? +1 error, +1 for q
+			{
+				errorCount += 1;
+				outQ << "WRONG CLASS! RIGHT - " << Y[k] << ".\n";
+			}
+		}
+
+		outQ << "Error count = " << errorCount << "\n_____END REPORT_____\n";
 }
 
 int main()
