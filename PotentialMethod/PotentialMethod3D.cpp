@@ -213,7 +213,7 @@ int main()
 {
 	ifstream istrX;
 	ifstream istrParam; //for reading params
-	ifstream istrY("1234.txt");
+	ifstream istrY;
 	ifstream inX("12.txt");
 	istrX.open("123.txt", ios::in);
 	istrY.open("1234.txt", ios::in);
