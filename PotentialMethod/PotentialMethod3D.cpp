@@ -14,7 +14,7 @@ int a(vector<double>);
 double K(double);
 double evcl(subject, subject);
 double H(vector<subject>, int);
-double H(vector<subject>, int, int&);
+double H(vector<subject>, int, int*);
 
 int h;
 const int epsilon = 18;
@@ -49,7 +49,7 @@ struct subject
 };
 
 
-int a(vector<int> W) //find maximum W
+int a(vector<double> W) //find maximum W
 {
 	int res = 0;
 	double start = W.front();
@@ -149,7 +149,7 @@ void makeReportEducation()
 {
 }
 
-double H(vector<subject> X, int ex, int& index) //Parsen's window with variable width
+double H(vector<subject> X, int ex, int* index) //Parsen's window with variable width
 {
 	vector<pair<double, int>> distances;
 
@@ -168,7 +168,7 @@ double H(vector<subject> X, int ex, int& index) //Parsen's window with variable 
 	}
 
 	double result = distances.front().first / distances[1].first;
-	index = distances.front().second;
+	*index = distances.front().second;
 	return result;
 }
 
@@ -178,19 +178,19 @@ void makeReportResult(const vector<subject> X, const vector<int> q, const vector
 	outQ.open("ReportResult.txt", ios::app);
 
 	outQ << "\n_____RESULTS_____\n";
-	vector<int> weights;
+	vector<double> weights;
 	int errorCount, maxPotIndex = 0;
 	errorCount = 0;
 	for (int k = 0; k < X.size(); k++)
 	{
 		for (int i = 0; i < X.size(); i++)
 		{
-			double w = K(H(X, k, maxPotIndex));
+			double w = K(H(X, k, &maxPotIndex));
 			w = w * q[maxPotIndex];
 			weights.push_back(w); //find all W
 		}
 
-		maxPotIndex = a(q); //find max W (its index)
+		maxPotIndex = a(weights); //find max W (its index)
 
 		outQ << "Subject: x - " << X[k].x << ", y - " << X[k].y << ", z - " << X[k].z << ";";
 		outQ << " Result: class " << Y[maxPotIndex] << " - ";
