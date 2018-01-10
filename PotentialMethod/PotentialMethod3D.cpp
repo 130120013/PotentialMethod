@@ -17,7 +17,7 @@ double H(vector<subject>, int);
 double H(vector<subject>, int, int*);
 
 int h;
-const int epsilon = 18;
+const int epsilon = 2;
 
 //classes
 enum soybeanClass { diaporthe_stem_canker, charcoal_rot, rhizoctonia_root_rot,
@@ -38,13 +38,18 @@ vector<string> split(const string &s, char delim) {
 
 struct subject
 {
-	double x;
-	double y;
-	double z;
+	double u;
+	double v;
+	//double x;
+	//double y;
+	//double z;
 	subject() = default;
-	subject(double X, double Y, double Z)
+	subject(double U, double V
+//, double X, double Y, double Z
+)
 	{
-		x = X; y = Y; z = Z;
+		u = U; v = V;
+// x = X; y = Y; z = Z;
 	}
 };
 
@@ -67,7 +72,9 @@ int a(vector<double> W) //find maximum W
 
 double evcl(subject a, subject b) //distance
 {
-	return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2) + pow(a.z - b.z, 2));
+	return sqrt(pow(a.u - b.u, 2) + pow(a.v - b.v, 2) 
+//+ pow(a.z - b.z, 2) + pow(a.v - b.v, 2) + pow(a.u - b.u, 2)
+);
 }
 
 double H(vector<subject> X, int ex) //Parsen's window with variable width
@@ -108,8 +115,11 @@ vector<int> learnParams(vector<subject> X, const vector<soybeanClass> Y)
 	{
 		q.push_back(0);
 	}
-
 	vector<double> weights;
+	
+	ofstream outLearnErrors;
+	outLearnErrors.open("ReportLearn.txt", ios::app);
+	outLearnErrors<<"\n___LEARNING RESULTS___\n";
 
 	int maxPotIndex = 0;
 	do
@@ -127,21 +137,25 @@ vector<int> learnParams(vector<subject> X, const vector<soybeanClass> Y)
 
 			if (Y[maxPotIndex] != Y[k]) //different classes? +1 error, +1 for q
 			{
+				outLearnErrors<<"Subject: u - " << X[k].u << ", v - " << X[k].v //<< ", x - " << X[k].x << ", y - " << X[k].y << ", z - " << X[k].z 
+<< ";";
+outLearnErrors<<" Result: class " << Y[maxPotIndex] << " - ";
+outLearnErrors<<"WRONG CLASS! RIGHT - " << Y[k] << ".\n";
 				errorCount += 1;
 				q[k] += 1;
 			}
-
 			weights.clear();
 		}
 	} while (errorCount > epsilon); //while errors more than limit (epsilon)
 
 	ofstream outQ;
-	outQ.open("124234.txt", ios::trunc);
+	outQ.open("Weights.txt", ios::trunc);
 		for (auto item = q.begin(); item != q.end(); item++)
 		{
 			outQ << *item << "\n";
 		}
 	
+outLearnErrors<<"\n___END LEARNING___\n";
 	return q;
 }
 
@@ -161,12 +175,16 @@ double H(vector<subject> X, int ex, int* index) //Parsen's window with variable 
 			distances.push_back({ dist, i });
 		}
 	}
-
+cout<<"\nex"<<ex;
 	for (auto it : distances)
 	{
 		std::sort(distances.begin(), distances.end());
 	}
 
+	for (auto it : distances)
+	{
+		cout<<"\nfirst = " <<it.first << " second = " << it.second;
+	}
 	double result = distances.front().first / distances[1].first;
 	*index = distances.front().second;
 	return result;
@@ -186,13 +204,16 @@ void makeReportResult(const vector<subject> X, const vector<int> q, const vector
 		for (int i = 0; i < X.size(); i++)
 		{
 			double w = K(H(X, k, &maxPotIndex));
+			//cout<<"\nINDEX = " <<maxPotIndex;
 			w = w * q[maxPotIndex];
 			weights.push_back(w); //find all W
 		}
 
 		maxPotIndex = a(weights); //find max W (its index)
 
-		outQ << "Subject: x - " << X[k].x << ", y - " << X[k].y << ", z - " << X[k].z << ";";
+		outQ << "Subject: u - " << X[k].u << ", v - " << X[k].v <<
+// ", x - " << X[k].x << ", y - " << X[k].y << ", z - " << X[k].z <<
+ ";";
 		outQ << " Result: class " << Y[maxPotIndex] << " - ";
 		if ((soybeanClass)Y[maxPotIndex] != Y[k]) //different classes? +1 error, +1 for q
 		{
@@ -201,12 +222,15 @@ void makeReportResult(const vector<subject> X, const vector<int> q, const vector
 		}
 		else
 		{
-			cout << Y[k] << "\n";
 			outQ << "OK\n";
 		}
+
+		weights.clear();
 	}
 
 	outQ << "Error count = " << errorCount << "\n_____END REPORT_____\n";
+
+
 }
 
 int main()
@@ -214,10 +238,10 @@ int main()
 	ifstream istrX;
 	ifstream istrParam; //for reading params
 	ifstream istrY;
-	ifstream inX("12.txt");
-	istrX.open("123.txt", ios::in);
-	istrY.open("1234.txt", ios::in);
-	istrParam.open("124234.txt", ios::in);
+	ifstream inX;
+	istrX.open("XLearn.txt", ios::in);
+	istrY.open("YLearn.txt", ios::in);
+	istrParam.open("Weights.txt", ios::in);
 	string str;
 	vector<subject> XLearn; //(read from file input)
 	vector<soybeanClass> YLearn; //(read from file output)
@@ -240,7 +264,7 @@ int main()
 	while (getline(istrX, n))
 	{
 		XL = split(n, ',');
-		subject subj(stod(XL[0]), stod(XL[1]), stod(XL[2]));
+		subject subj(stod(XL[0]), stod(XL[1]));
 		XLearn.push_back(subj);
 	}
 
@@ -249,19 +273,19 @@ int main()
 		YLearn.push_back(soybeanClass(stoi(n)));
 	}
 
-	while (getline(inX, n))
-	{
-		sx = split(n, ',');
-		subject subj(stod(sx[0]), stod(sx[1]), stod(sx[2]));
-		X.push_back(subj);
-	}
+	//while (getline(inX, n))
+	//{
+	//	sx = split(n, ',');
+	//	subject subj(stod(sx[0]), stod(sx[1]), stod(sx[2]));
+	//	X.push_back(subj);
+	//}
 
 	param = learnParams(XLearn, YLearn);
-	while (getline(istrParam, n))
-	{
-		param.push_back(stoi(n));
-	}
-	param = learnParams(XLearn, YLearn);
+	//while (getline(istrParam, n))
+	//{
+//		param.push_back(stoi(n));
+//	}
+	//param = learnParams(XLearn, YLearn);
 	cout << "\n\n\n";
 
 	makeReportResult(XLearn, param, XLearn, YLearn);

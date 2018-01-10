@@ -1,0 +1,35 @@
+
+___LEARNING RESULTS___
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+
+___END LEARNING___
+
+___LEARNING RESULTS___
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+
+___END LEARNING___
+
+___LEARNING RESULTS___
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+
+___END LEARNING___
+
+___LEARNING RESULTS___
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+
+___END LEARNING___
+
+___LEARNING RESULTS___
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+
+___END LEARNING___
+
+___LEARNING RESULTS___
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+
+___END LEARNING___
+
+___LEARNING RESULTS___
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+
+___END LEARNING___

@@ -1,0 +1,331 @@
+
+_____RESULTS_____
+Subject: x - 1, y - 2, z - 3; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 2, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 3, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 3, z - 1; Result: class 1 - OK
+Subject: x - 1, y - 2, z - 4; Result: class 1 - OK
+Subject: x - 1, y - 4, z - 7; Result: class 1 - OK
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: x - 1, y - 2, z - 3; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 2, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 3, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 3, z - 1; Result: class 1 - OK
+Subject: x - 1, y - 2, z - 4; Result: class 1 - OK
+Subject: x - 1, y - 4, z - 7; Result: class 1 - OK
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: x - 1, y - 2, z - 3; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 2, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 3, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 3, z - 1; Result: class 1 - OK
+Subject: x - 1, y - 2, z - 4; Result: class 1 - OK
+Subject: x - 1, y - 4, z - 7; Result: class 1 - OK
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: x - 1, y - 2, z - 3; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 2, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 3, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 3, z - 1; Result: class 1 - OK
+Subject: x - 1, y - 2, z - 4; Result: class 1 - OK
+Subject: x - 1, y - 4, z - 7; Result: class 1 - OK
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: x - 1, y - 2, z - 3; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 2, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 3, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 3, z - 1; Result: class 1 - OK
+Subject: x - 1, y - 2, z - 4; Result: class 1 - OK
+Subject: x - 1, y - 4, z - 7; Result: class 1 - OK
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: x - 1, y - 2, z - 3; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 2, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 3, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 3, z - 1; Result: class 1 - OK
+Subject: x - 1, y - 2, z - 4; Result: class 1 - OK
+Subject: x - 1, y - 4, z - 7; Result: class 1 - OK
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: x - 1, y - 2, z - 3; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 1, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 2, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 2; Result: class 1 - OK
+Subject: x - 2, y - 3, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 3, z - 1; Result: class 1 - OK
+Subject: x - 1, y - 2, z - 4; Result: class 1 - OK
+Subject: x - 1, y - 4, z - 7; Result: class 1 - OK
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: x - 6, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 4, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 3, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 6, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 5, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 4, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 6, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 4, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 1, y - 1, z - 0; Result: class 1 - OK
+Subject: x - 1, y - 1, z - 0; Result: class 1 - OK
+Subject: x - 0, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 0, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 2, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 2, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 6
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: x - 6, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 4, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 3, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 6, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 5, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 4, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 6, y - 0, z - 1; Result: class 1 - OK
+Subject: x - 4, y - 0, z - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 0, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 0, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 2, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 1, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: x - 2, y - 1, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 1072693248.
+Error count = 9
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 3, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 5, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 1072693248.
+Error count = 9
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 3, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 5, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 9
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 3, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 5, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 9
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 3, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 0, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 5, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 3, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 0, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 5, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 3, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 0, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 5, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 3, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 0, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 5, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 6, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 4, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 3, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 6, v - 0, x - 0, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 5, v - 0, x - 1, y - 0, z - 0; Result: class 1 - OK
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 0, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1, x - 0, y - 3, z - 2; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 4
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 4, v - 0; Result: class 1 - OK
+Subject: u - 3, v - 0; Result: class 1 - OK
+Subject: u - 6, v - 0; Result: class 1 - OK
+Subject: u - 5, v - 0; Result: class 1 - OK
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 3
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 4, v - 0; Result: class 1 - OK
+Subject: u - 6, v - 0; Result: class 1 - OK
+Subject: u - 5, v - 0; Result: class 1 - OK
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 3
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 4, v - 0; Result: class 1 - OK
+Subject: u - 6, v - 0; Result: class 1 - OK
+Subject: u - 5, v - 0; Result: class 1 - OK
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 3
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 4, v - 0; Result: class 1 - OK
+Subject: u - 6, v - 0; Result: class 1 - OK
+Subject: u - 5, v - 0; Result: class 1 - OK
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 3
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 4, v - 0; Result: class 1 - OK
+Subject: u - 6, v - 0; Result: class 1 - OK
+Subject: u - 5, v - 0; Result: class 1 - OK
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 3
+_____END REPORT_____
+
+_____RESULTS_____
+Subject: u - 4, v - 0; Result: class 1 - OK
+Subject: u - 6, v - 0; Result: class 1 - OK
+Subject: u - 5, v - 0; Result: class 1 - OK
+Subject: u - 0, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 2, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Subject: u - 1, v - 1; Result: class 1 - WRONG CLASS! RIGHT - 3.
+Error count = 3
+_____END REPORT_____
